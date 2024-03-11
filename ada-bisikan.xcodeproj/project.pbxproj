@@ -7,18 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41767682B9F94A1006B4D53 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41767672B9F94A1006B4D53 /* ProfileView.swift */; };
+		E417676B2B9F99C6006B4D53 /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = E417676A2B9F99C6006B4D53 /* QRCode */; };
+		E417676D2B9F99C6006B4D53 /* QRCodeDetector in Frameworks */ = {isa = PBXBuildFile; productRef = E417676C2B9F99C6006B4D53 /* QRCodeDetector */; };
+		E417676F2B9F99C6006B4D53 /* QRCodeDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E417676E2B9F99C6006B4D53 /* QRCodeDynamic */; };
+		E41767712B9F99C6006B4D53 /* QRCodeStatic in Frameworks */ = {isa = PBXBuildFile; productRef = E41767702B9F99C6006B4D53 /* QRCodeStatic */; };
 		E46B88692B9B635700D681F1 /* ada_bisikanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B88682B9B635700D681F1 /* ada_bisikanApp.swift */; };
-		E46B886B2B9B635700D681F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B886A2B9B635700D681F1 /* ContentView.swift */; };
+		E46B886B2B9B635700D681F1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B886A2B9B635700D681F1 /* LoginView.swift */; };
 		E46B886D2B9B635800D681F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46B886C2B9B635800D681F1 /* Assets.xcassets */; };
 		E46B88702B9B635800D681F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46B886F2B9B635800D681F1 /* Preview Assets.xcassets */; };
+		E46B88772B9B729D00D681F1 /* VFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B88762B9B729D00D681F1 /* VFButton.swift */; };
+		E46B887B2B9B7D9B00D681F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B887A2B9B7D9B00D681F1 /* ContentView.swift */; };
+		E46B887D2B9B7DE100D681F1 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B887C2B9B7DE100D681F1 /* AuthViewModel.swift */; };
+		E46B887F2B9B7FC500D681F1 /* AdaBisikanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B887E2B9B7FC500D681F1 /* AdaBisikanApp.swift */; };
+		E46B88852B9B835500D681F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B88842B9B835500D681F1 /* NetworkManager.swift */; };
+		E46B88892B9B850200D681F1 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B88882B9B850200D681F1 /* ServiceError.swift */; };
+		E46B888C2B9B8A6200D681F1 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B888B2B9B8A6200D681F1 /* InboxView.swift */; };
+		E46B888E2B9B990F00D681F1 /* AuthedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46B888D2B9B990F00D681F1 /* AuthedView.swift */; };
+		E4AB3B112B9CBE8400C2F457 /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB3B102B9CBE8400C2F457 /* InboxRowView.swift */; };
+		E4AB3B142B9CBED000C2F457 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB3B132B9CBED000C2F457 /* Message.swift */; };
+		E4AB3B162B9CE36C00C2F457 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB3B152B9CE36C00C2F457 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41767672B9F94A1006B4D53 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E46B88652B9B635700D681F1 /* ada-bisikan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ada-bisikan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46B88682B9B635700D681F1 /* ada_bisikanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ada_bisikanApp.swift; sourceTree = "<group>"; };
-		E46B886A2B9B635700D681F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E46B886A2B9B635700D681F1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E46B886C2B9B635800D681F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E46B886F2B9B635800D681F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E46B88762B9B729D00D681F1 /* VFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VFButton.swift; sourceTree = "<group>"; };
+		E46B887A2B9B7D9B00D681F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E46B887C2B9B7DE100D681F1 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E46B887E2B9B7FC500D681F1 /* AdaBisikanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaBisikanApp.swift; sourceTree = "<group>"; };
+		E46B88842B9B835500D681F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E46B88882B9B850200D681F1 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		E46B888B2B9B8A6200D681F1 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		E46B888D2B9B990F00D681F1 /* AuthedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthedView.swift; sourceTree = "<group>"; };
+		E4AB3B102B9CBE8400C2F457 /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
+		E4AB3B132B9CBED000C2F457 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E4AB3B152B9CE36C00C2F457 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +54,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E417676D2B9F99C6006B4D53 /* QRCodeDetector in Frameworks */,
+				E417676B2B9F99C6006B4D53 /* QRCode in Frameworks */,
+				E41767712B9F99C6006B4D53 /* QRCodeStatic in Frameworks */,
+				E417676F2B9F99C6006B4D53 /* QRCodeDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E41767662B9F9496006B4D53 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E41767672B9F94A1006B4D53 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		E46B885C2B9B635700D681F1 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +91,12 @@
 		E46B88672B9B635700D681F1 /* ada-bisikan */ = {
 			isa = PBXGroup;
 			children = (
+				E46B88832B9B833500D681F1 /* Services */,
+				E46B88822B9B7FDD00D681F1 /* Views */,
+				E46B88812B9B7FD400D681F1 /* Core */,
+				E46B88802B9B7FCD00D681F1 /* App */,
+				E46B88782B9B735C00D681F1 /* Features */,
 				E46B88682B9B635700D681F1 /* ada_bisikanApp.swift */,
-				E46B886A2B9B635700D681F1 /* ContentView.swift */,
 				E46B886C2B9B635800D681F1 /* Assets.xcassets */,
 				E46B886E2B9B635800D681F1 /* Preview Content */,
 			);
@@ -65,6 +109,86 @@
 				E46B886F2B9B635800D681F1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E46B88782B9B735C00D681F1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E41767662B9F9496006B4D53 /* Profile */,
+				E46B888A2B9B8A5500D681F1 /* Home */,
+				E46B88792B9B736D00D681F1 /* Auth */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E46B88792B9B736D00D681F1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E46B886A2B9B635700D681F1 /* LoginView.swift */,
+				E46B887C2B9B7DE100D681F1 /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		E46B88802B9B7FCD00D681F1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E46B887E2B9B7FC500D681F1 /* AdaBisikanApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E46B88812B9B7FD400D681F1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E46B887A2B9B7D9B00D681F1 /* ContentView.swift */,
+				E46B888D2B9B990F00D681F1 /* AuthedView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E46B88822B9B7FDD00D681F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E46B88762B9B729D00D681F1 /* VFButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E46B88832B9B833500D681F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E46B88842B9B835500D681F1 /* NetworkManager.swift */,
+				E46B88882B9B850200D681F1 /* ServiceError.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E46B888A2B9B8A5500D681F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E4AB3B122B9CBEB200C2F457 /* Models */,
+				E4AB3B0F2B9CBE6300C2F457 /* Views */,
+				E46B888B2B9B8A6200D681F1 /* InboxView.swift */,
+				E4AB3B152B9CE36C00C2F457 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E4AB3B0F2B9CBE6300C2F457 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4AB3B102B9CBE8400C2F457 /* InboxRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4AB3B122B9CBEB200C2F457 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4AB3B132B9CBED000C2F457 /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +207,12 @@
 			dependencies = (
 			);
 			name = "ada-bisikan";
+			packageProductDependencies = (
+				E417676A2B9F99C6006B4D53 /* QRCode */,
+				E417676C2B9F99C6006B4D53 /* QRCodeDetector */,
+				E417676E2B9F99C6006B4D53 /* QRCodeDynamic */,
+				E41767702B9F99C6006B4D53 /* QRCodeStatic */,
+			);
 			productName = "ada-bisikan";
 			productReference = E46B88652B9B635700D681F1 /* ada-bisikan.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +241,9 @@
 				Base,
 			);
 			mainGroup = E46B885C2B9B635700D681F1;
+			packageReferences = (
+				E41767692B9F99C6006B4D53 /* XCRemoteSwiftPackageReference "qrcode" */,
+			);
 			productRefGroup = E46B88662B9B635700D681F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +270,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E46B886B2B9B635700D681F1 /* ContentView.swift in Sources */,
+				E46B887D2B9B7DE100D681F1 /* AuthViewModel.swift in Sources */,
+				E46B88892B9B850200D681F1 /* ServiceError.swift in Sources */,
+				E4AB3B162B9CE36C00C2F457 /* HomeView.swift in Sources */,
+				E46B88772B9B729D00D681F1 /* VFButton.swift in Sources */,
+				E46B888E2B9B990F00D681F1 /* AuthedView.swift in Sources */,
+				E46B888C2B9B8A6200D681F1 /* InboxView.swift in Sources */,
+				E46B887F2B9B7FC500D681F1 /* AdaBisikanApp.swift in Sources */,
+				E4AB3B112B9CBE8400C2F457 /* InboxRowView.swift in Sources */,
+				E46B88852B9B835500D681F1 /* NetworkManager.swift in Sources */,
+				E46B886B2B9B635700D681F1 /* LoginView.swift in Sources */,
+				E4AB3B142B9CBED000C2F457 /* Message.swift in Sources */,
+				E46B887B2B9B7D9B00D681F1 /* ContentView.swift in Sources */,
+				E41767682B9F94A1006B4D53 /* ProfileView.swift in Sources */,
 				E46B88692B9B635700D681F1 /* ada_bisikanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +489,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E41767692B9F99C6006B4D53 /* XCRemoteSwiftPackageReference "qrcode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dagronf/qrcode.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 18.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E417676A2B9F99C6006B4D53 /* QRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41767692B9F99C6006B4D53 /* XCRemoteSwiftPackageReference "qrcode" */;
+			productName = QRCode;
+		};
+		E417676C2B9F99C6006B4D53 /* QRCodeDetector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41767692B9F99C6006B4D53 /* XCRemoteSwiftPackageReference "qrcode" */;
+			productName = QRCodeDetector;
+		};
+		E417676E2B9F99C6006B4D53 /* QRCodeDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41767692B9F99C6006B4D53 /* XCRemoteSwiftPackageReference "qrcode" */;
+			productName = QRCodeDynamic;
+		};
+		E41767702B9F99C6006B4D53 /* QRCodeStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E41767692B9F99C6006B4D53 /* XCRemoteSwiftPackageReference "qrcode" */;
+			productName = QRCodeStatic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E46B885D2B9B635700D681F1 /* Project object */;
 }
