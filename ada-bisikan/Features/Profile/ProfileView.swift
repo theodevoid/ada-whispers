@@ -6,31 +6,6 @@
 //
 
 import SwiftUI
-import QRCode
-
-func doc1 (data: String) -> QRCode.Document {
-    let doc = QRCode.Document(generator: QRCodeGenerator_External())
-    
-    let black = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
-    
-    doc.utf8String = data
-    
-    doc.design.backgroundColor(CGColor(gray: 0, alpha: 0))
-    
-    doc.design.style.background = QRCode.FillStyle.Solid(0, 0, 0, alpha: 0)
-    doc.design.shape.eye = QRCode.EyeShape.RoundedRect()
-    doc.design.style.eye = QRCode.FillStyle.Solid(black)
-    
-    doc.design.shape.pupil = QRCode.PupilShape.Circle()
-    doc.design.style.pupil =  QRCode.FillStyle.Solid(black)
-    
-    doc.design.style.onPixels = QRCode.FillStyle.Solid(black)
-    doc.design.shape.onPixels = QRCode.PixelShape.CurvePixel()
-    
-    doc.design.additionalQuietZonePixels = 1
-    
-    return doc
-}
 
 struct ProfileView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
@@ -43,11 +18,23 @@ struct ProfileView: View {
             
             VStack {
                 VStack {
-                    QRCodeDocumentUIView(document: doc1(data: authViewModel.currentUser?.username ?? ""))
+                    VStack {
+                        Text("Send me a message!")
+                            .padding(.top)
+                            .fontWeight(.bold)
+                            .font(.title2)
+                        Text("My username is...")
+                            .font(.title3)
+                    }
+                    
+                    Rectangle()
+                        .fill(.black)
+                        .frame(height: 2)
+                    
                     Text(authViewModel.currentUser?.username ?? "")
                         .textCase(.uppercase)
                         .fontWeight(.semibold)
-                        .padding()
+                        .padding(.bottom)
                         .font(.title)
                     
                 }

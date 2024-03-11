@@ -20,7 +20,7 @@ struct HomeView: View {
             ZStack {
                 Color("Paper").ignoresSafeArea()
                 
-                VStack() {
+                VStack(alignment: .leading) {
                     Spacer()
                     Text("Send an anonymous message")
                         .fontWeight(.bold)
@@ -100,6 +100,10 @@ struct HomeView: View {
                             ))
                             .shadow(color: .black, radius: 0, x: 4, y: 4)
                     )
+                    Text("\(messageText.count)/300")
+                        .multilineTextAlignment(.leading)
+                        .foregroundStyle(messageText.count > 300 ? .red : .black)
+                    
                     Button(action: {
                         
                     }, label: {
