@@ -24,7 +24,7 @@ class AuthViewModel: ObservableObject {
     
     var networkManager = NetworkManager.shared
     
-    let baseURL = "https://z1mq5bx0-3000.asse.devtunnels.ms"
+    let baseURL = "https://ada-whispers-be-production.up.railway.app"
     
     let defaults = UserDefaults.standard
     
