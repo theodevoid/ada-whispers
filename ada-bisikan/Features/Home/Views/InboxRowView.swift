@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var sampleMessage: Message = Message(id: "1", content: "Hello there Hello there Hello there Hello there", createdAt: Date(timeIntervalSinceNow: -600))
+var sampleMessage: Message = Message(id: 1, messageId: "1", body: "Hello there Hello there Hello there Hello there", createdAt: Date(timeIntervalSinceNow: -600))
 
 struct InboxRowView: View {
     let formatter = RelativeDateTimeFormatter()
@@ -16,26 +16,13 @@ struct InboxRowView: View {
     
     var body: some View {
         HStack {
-//            Color.gray
-//                .opacity(0.2)
-//                .frame(width: 50, height: 50)
-//                .clipShape(.buttonBorder)
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 8)
-//                        .stroke(.black, lineWidth: 2)
-//                )
-//                .overlay(
-//                    Image(systemName: "envelope.fill")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .frame(width:35)
-//                        .padding(.horizontal)
-//                        .foregroundStyle(Color("Primary"))
-//                )
-//                .padding(.trailing, 4)
-
+            Circle()
+                .fill(message.isRead ? .white : .red)
+                .frame(width: 15, height: 15)
+                .padding(.trailing, 4)
+            
             VStack(alignment: .leading) {
-                Text(message.content)
+                Text(message.body)
                     .lineLimit(1)
                     .truncationMode(.tail)
                     .font(.title3)
@@ -59,8 +46,8 @@ struct InboxRowView: View {
                 .shadow(color: .black, radius: 0, x: 4, y: 4)
         )
         
-        
     }
+    
 }
 
 #Preview {

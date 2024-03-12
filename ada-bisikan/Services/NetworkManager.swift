@@ -10,18 +10,26 @@ import Foundation
 final class NetworkManager {
     static let shared = NetworkManager()
     
-    static let baseURL = "http://localhost:2000"
-    private let authURL = baseURL + "/auth"
+    static let baseURL = "http://localhost:3000"
+    private let usersURL = baseURL + "/users"
     
     private init () {}
     
-    func registerUser(completed: @escaping (Result<User, ServiceError>) -> Void) {
-        guard let url = URL(string: authURL) else {
+    func registerUser(username: String, completed: @escaping (Result<User, ServiceError>) -> Void) {
+        guard let url = URL(string: usersURL) else {
             completed(.failure(.invalidUrl))
             return
         }
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+        let jsonData = try? JSONSerialization.data(withJSONObject: ["username": username])
+        
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.httpMethod = "POST"
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpBody = jsonData
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             guard let _ = error else {
                 completed(.failure(.unableToComplete))
                 return
@@ -41,6 +49,8 @@ final class NetworkManager {
                 let decoder = JSONDecoder()
                 let decodedResponse = try decoder.decode(UserResponse.self, from: data)
                 
+                print(decodedResponse)
+                
                 completed(.success(decodedResponse.request))
             } catch {
                 completed(.failure(.invalidData))
@@ -51,6 +61,6 @@ final class NetworkManager {
     }
     
     func mockRegisterUser() -> User {
-        return User(id: "abc123", username: "theo", token: "token")
+        return User(id: 1, username: "theo", token: "token")
     }
 }

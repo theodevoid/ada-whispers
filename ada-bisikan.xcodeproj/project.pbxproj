@@ -23,6 +23,7 @@
 		E4AB3B112B9CBE8400C2F457 /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB3B102B9CBE8400C2F457 /* InboxRowView.swift */; };
 		E4AB3B142B9CBED000C2F457 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB3B132B9CBED000C2F457 /* Message.swift */; };
 		E4AB3B162B9CE36C00C2F457 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AB3B152B9CE36C00C2F457 /* HomeView.swift */; };
+		E4DC75B42BA0CA9D008C4A5D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DC75B32BA0CA9D008C4A5D /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,8 @@
 		E4AB3B102B9CBE8400C2F457 /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
 		E4AB3B132B9CBED000C2F457 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E4AB3B152B9CE36C00C2F457 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E4DC75B32BA0CA9D008C4A5D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E4DC75B52BA0CD40008C4A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		E46B88672B9B635700D681F1 /* ada-bisikan */ = {
 			isa = PBXGroup;
 			children = (
+				E4DC75B52BA0CD40008C4A5D /* Info.plist */,
 				E46B88832B9B833500D681F1 /* Services */,
 				E46B88822B9B7FDD00D681F1 /* Views */,
 				E46B88812B9B7FD400D681F1 /* Core */,
@@ -173,6 +177,7 @@
 			children = (
 				E46B88842B9B835500D681F1 /* NetworkManager.swift */,
 				E46B88882B9B850200D681F1 /* ServiceError.swift */,
+				E4DC75B32BA0CA9D008C4A5D /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DC75B42BA0CA9D008C4A5D /* LocationManager.swift in Sources */,
 				E46B887D2B9B7DE100D681F1 /* AuthViewModel.swift in Sources */,
 				E46B88892B9B850200D681F1 /* ServiceError.swift in Sources */,
 				E4AB3B162B9CE36C00C2F457 /* HomeView.swift in Sources */,
@@ -429,6 +435,8 @@
 				DEVELOPMENT_TEAM = TUQX899L59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ada-bisikan/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs location services to determine whether or not you are in Academy regions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,6 +470,8 @@
 				DEVELOPMENT_TEAM = TUQX899L59;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ada-bisikan/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs location services to determine whether or not you are in Academy regions";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

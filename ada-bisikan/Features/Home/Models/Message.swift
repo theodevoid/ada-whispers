@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct Message: Codable, Identifiable {
-    var id: String
-    var content: String
+struct Message: Decodable, Identifiable {
+    var id: Int
+    var messageId: String
+    var body: String
     var createdAt: Date
+    var isRead: Bool = false
 }

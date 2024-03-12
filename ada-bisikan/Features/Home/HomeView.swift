@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum ActiveAlert {
+    case success, error
+}
+
 struct HomeView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     
@@ -14,13 +18,35 @@ struct HomeView: View {
     @State private var messageText: String = ""
     @State private var placeholderText: String = "Message"
     
+    @State private var showAlert: Bool = false
+    @State private var activeAlert: ActiveAlert = .success
+    
+    @StateObject var locationManager = LocationManager()
+    
+    var userLatitude: String {
+        return "\(locationManager.location?.latitude ?? 0)"
+    }
+    
+    var userLongitude: String {
+        return "\(locationManager.location?.longitude ?? 0)"
+    }
+    
     var body: some View {
         
         NavigationStack {
             ZStack {
                 Color("Paper").ignoresSafeArea()
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .center) {
+                    HStack {
+                        Circle()
+                            .frame(width: 8, height: 8)
+                            .foregroundStyle(locationManager.isInADA ? .green : .red)
+                            .padding(.trailing, 2)
+                        Text(locationManager.isInADA ? "You are currently in Academy regions" : "You are currently not in Academy regions")
+                            .foregroundStyle(.gray)
+                    }
+                    
                     Spacer()
                     Text("Send an anonymous message")
                         .fontWeight(.bold)
@@ -44,7 +70,7 @@ struct HomeView: View {
                         Rectangle()
                             .fill(.black)
                             .frame(height: 2)
-                            
+                        
                         
                         VStack(alignment: .leading) {
                             ZStack(alignment: .leading) {
@@ -105,7 +131,28 @@ struct HomeView: View {
                         .foregroundStyle(messageText.count > 300 ? .red : .black)
                     
                     Button(action: {
-                        
+                        Task {
+                            if !locationManager.isInADA {
+                                activeAlert = .error
+                                showAlert = true
+                                
+                                return
+                            }
+                            
+                            let result = try await authViewModel.sendMessage(message: messageText, username: recipientUsername)
+                            
+                            print(result)
+                            
+                            if result == "success" {
+                                messageText = ""
+                                recipientUsername = ""
+                                activeAlert = .success
+                            } else {
+                                activeAlert = .error
+                            }
+                            
+                            showAlert = true
+                        }
                     }, label: {
                         Text("Send message")
                             .frame(maxWidth: .infinity, maxHeight: 36)
@@ -124,8 +171,22 @@ struct HomeView: View {
                                     .fill(Color("Accent"))
                                     .shadow(color: .black, radius: 0, x: 4, y: 4)
                             )
-                        
+                            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     })
+                    .alert(isPresented: $showAlert) {
+                        switch activeAlert {
+                        case .error:
+                            return Alert(
+                                title: Text("An error has occured"),
+                                message: Text("Make sure the user exists, your message is 1-300 characters long, and you are in Academy regions")
+                            )
+                        case .success:
+                            return Alert(
+                                title: Text("Message sent!")
+                            )
+                        }
+                        
+                    }
                     .padding(.top)
                     
                     Spacer()
